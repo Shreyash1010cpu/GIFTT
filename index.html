@@ -141,10 +141,10 @@
             noBtn.style.top = `${y}px`;
         });
 
-        // "Yes" button action: Show a sweet message and gifts
+        // "Yes" button action: Show a sweet message and gifts, and enable scrolling
         yesBtn.addEventListener('click', () => {
             document.body.innerHTML = `
-                <div style="text-align: center; padding: 50px; font-family: 'Dancing Script', cursive; background: linear-gradient(135deg, #ff9a9e, #fecfef); height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+                <div style="text-align: center; padding: 50px; font-family: 'Dancing Script', cursive; background: linear-gradient(135deg, #ff9a9e, #fecfef); min-height: 100vh; display: flex; flex-direction: column; justify-content: center;">
                     <h1 style="font-size: 3em; color: #d63384;">Yes! I love you Vaishnavii! 💍</h1>
                     <p style="font-size: 1.5em; color: #6c757d;">You've made me the happiest. I'm so lucky to have you in my life!</p>
                     <div class="gifts">
@@ -163,6 +163,8 @@
                     </div>
                 </div>
             `;
+            // Enable scrolling for the new page (important for mobile)
+            document.body.style.overflow = 'auto';
         });
 
         // Function to toggle gift content visibility
@@ -173,5 +175,3 @@
     </script>
 </body>
 </html>
-
-
